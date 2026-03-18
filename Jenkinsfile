@@ -10,13 +10,13 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t sayeesh1/image:v1 .'
+                bat 'docker build -t myimage .'
             }
         }
 
         stage('Push to Docker Hub') {
             steps {
-                sh 'docker push sayeesh1/image:v1'
+                bat 'docker push myimage'
             }
         }
     }
